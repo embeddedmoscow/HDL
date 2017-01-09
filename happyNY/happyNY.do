@@ -1,16 +1,14 @@
-transcript file ""
+transcript on
 if {[file exists sim]} {
 	cd sim
 
 	if {[file exists rtl_work]} {
-	vdel -lib rtl_work -all
+		vdel -lib rtl_work -all
 	}
-	cd ..
-	rm -r sim
+} else {
+	mkdir sim
+	cd sim
 }
-
-mkdir sim
-cd sim
 
 vlib rtl_work
 vmap work rtl_work
