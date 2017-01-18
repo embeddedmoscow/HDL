@@ -1,2 +1,4 @@
-/sim
+/work
+*.ini
+*.wlf
 transcript
